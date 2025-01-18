@@ -1,0 +1,27 @@
+?? Тестова програма «Циклічний алгоритм»
+MAIMPROGRAM
+DATA    INTEGER _AAAAAAAAA, _BBBBBBBBB, _XXXXXXXXX, _IIIIIIIII, _JJJJJJJJJ;
+START
+
+??  1. Ввести два числа А і В, причому А<В
+GET   _AAAAAAAAA
+GET   _BBBBBBBBB
+
+??  Використання простого оператора циклу:
+
+??  2. Вивести на екран квадрати чисел від А до В включно.
+FOR _AAAAAAAAA ==> _XXXXXXXXX TO _BBBBBBBBB DO
+    PUT _XXXXXXXXX * _XXXXXXXXX
+
+??  Використання вкладеного оператора циклу:
+
+??  3. Обрахувати Х=А*В за наступним алгоритмом:...
+0 ==> _XXXXXXXXX
+FOR 1 ==> _IIIIIIIII TO _AAAAAAAAA DO
+    FOR 1 ==>_JJJJJJJJJ TO _BBBBBBBBB DO 
+        _XXXXXXXXX + 1 ==> _XXXXXXXXX
+
+??  4. Вивести значення Х на екран
+PUT _XXXXXXXXX
+
+END

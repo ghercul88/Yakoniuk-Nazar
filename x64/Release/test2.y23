@@ -1,0 +1,49 @@
+?? Алгоритм з розгалуженням
+MAIMPROGRAM
+
+DATA    INTEGER _AAAAAAAAA, _BBBBBBBBB, _CCCCCCCCC;
+START
+
+??  Ввести три числа А, В, С
+GET _AAAAAAAAA
+GET _BBBBBBBBB
+GET _CCCCCCCCC
+
+??  Використання вкладеного умовного оператора:
+??  2. Знайти найбільше з них і вивести його на екран
+IF  ( _AAAAAAAAA GT _BBBBBBBBB) 
+    IF ( _AAAAAAAAA GT _CCCCCCCCC)
+        PUT  _AAAAAAAAA
+    ELSE
+        PUT  _CCCCCCCCC
+ELSE
+    IF (_BBBBBBBBB GT _CCCCCCCCC)
+        PUT  _BBBBBBBBB
+    ELSE
+        PUT  _CCCCCCCCC
+
+??  Використання простого умовного оператора:
+
+??  3. Вивести на екран число 1, якщо усі числа однакові (логічний вираз в умовному операторі 
+??  має виглядати так: «(А=В) і (А=С) і (В=С)»), інакше вивести 0.
+IF ((_AAAAAAAAA == _BBBBBBBBB) AND (_AAAAAAAAA == _CCCCCCCCC) AND (_BBBBBBBBB == _CCCCCCCCC))
+    PUT 1
+ELSE
+    PUT 0
+
+??  4. Вивести на екран число -1, якщо хоча б одне з чисел від’ємне (логічний вираз в умовному 
+??  операторі має виглядати так: «(АLT0) або (ВLT0) або (СLT0)»), інакше вивести 0.
+IF ((_AAAAAAAAA LT 0) OR (_BBBBBBBBB LT 0) OR (_CCCCCCCCC LT 0))
+    PUT -1
+ELSE
+    PUT  0
+
+??  5. Вивести на екран число 10, якщо число А більше за суму чисел В і С (логічний вираз в 
+??  умовному операторі має виглядати так: «!(АLT(В+С))»), інакше вивести 0
+IF (!!(_AAAAAAAAA LT (_BBBBBBBBB + _CCCCCCCCC)))
+    PUT 10
+ELSE
+    PUT 0
+
+
+END
